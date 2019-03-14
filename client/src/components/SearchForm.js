@@ -7,7 +7,7 @@ const SearchForm = ({onSubmit}) => {
   return (
     <form id="SearchForm" onSubmit={onSubmit}>
       <h1>Search for Boooks</h1>
-      <InputGroup name="search" lableText="Enter sear terms">
+      <InputGroup name="search">
         <Input className="search" name="search" />
       </InputGroup>
       <Button id="search-button" type="submit" color="primary" />

@@ -10,7 +10,7 @@ const InputGroup = ({name, labelText, children}) => (
 
 InputGroup.propTypes = {
   name: PropTypes.string,
-  labelText: PropTypes.string.isRequired,
+  labelText: PropTypes.string,
   children: PropTypes.node.isRequired,
 }
 
