@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import ResultsPage from '../ResultsPage';
+import ResultsPage from '../components/ResultsPage';
 import serialize from 'form-serialize';
 import {getResults} from '../actions';
 

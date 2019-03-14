@@ -1,7 +1,7 @@
 import * as Actions from './actions';
 
 const initialState = {
-  results: {},
+  results: [],
   isFetching: false,
   error: null
 }
@@ -11,7 +11,7 @@ export function goodReads(state=initialState, action) {
     case Actions.GET_RESULTS_SUCCESS: 
       return {
         ...state,
-        results: action.data,
+        results: action.data.GoodreadsResponse.search.results.work,
         isFetching: false
       }
     case Actions.GET_RESULTS_REQUEST:

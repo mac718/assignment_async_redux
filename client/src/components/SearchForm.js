@@ -1,7 +1,7 @@
 import React from 'react';
-import Button from './elements/Button';
-import Input from './elements/Input';
-import InputGroup from './elements/InputGroup';
+import Button from '../elements/Button';
+import Input from '../elements/Input';
+import InputGroup from '../elements/InputGroup';
 
 const SearchForm = ({onSubmit}) => {
   return (

@@ -1,14 +1,17 @@
 import React from 'react';
 import SearchForm from './SearchForm';
+import ResultListItem from './ResultListItem';
 
 const ResultsPage = ({results, onSubmit}) => {
-  console.log(results)
+  const resultsList = results.map(work => {
+    return <ResultListItem item={work} />
+  })
 
   return (
     <div className="ResultsPage">
       <SearchForm onSubmit={onSubmit} />
       <div className="ResultsList">
-        {JSON.stringify(results)}
+        {resultsList}
       </div>
     </div>
   )
