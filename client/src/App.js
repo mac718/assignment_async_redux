@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import ResultsPageContainer from './containers/ResultsPageContainer';
+import DetailsModalContainer from './containers/DetailsModalContainer';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <ResultsPageContainer />
+        <DetailsModalContainer />
       </div>
     );
   }
