@@ -2,9 +2,9 @@ import React from 'react';
 import SearchForm from './SearchForm';
 import ResultListItem from './ResultListItem';
 
-const ResultsPage = ({results, onSubmit, isFetching, showModal}) => {
+const ResultsPage = ({results, onSubmit, isFetching, showModal, hideModal, onClick}) => {
   const resultsList = results.map(work => {
-    return <ResultListItem item={work} showModal={showModal}/>
+    return <ResultListItem item={work} showModal={showModal} />
   })
 
   return (

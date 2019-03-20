@@ -6,7 +6,7 @@ import DetailsModalContainer from './containers/DetailsModalContainer';
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="App container">
         <ResultsPageContainer />
         <DetailsModalContainer />
       </div>

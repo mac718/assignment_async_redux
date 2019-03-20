@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import ResultsPage from '../components/ResultsPage';
 import serialize from 'form-serialize';
-import {getInitialResults, showModal, hideModal} from '../actions';
+import {getInitialResults, showModal, hideModal, getReviews} from '../actions';
 
 
 class ResultsPageContainer extends Component {
@@ -22,11 +22,11 @@ const mapStateToProps = state => {
   return {
     results: state.results,
     isFetching: state.isFetching,
-    modalShow: false
+    modalShow: state.modalShow
   }
 }
 
-const mapDispatchToProps = (dispatch, ownProps) => {
+const mapDispatchToProps = (dispatch) => {
   return {
     onSubmit: e => {
       console.log(e)
@@ -40,7 +40,13 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 
     showModal: (item) => {
       dispatch(showModal(item));
+      dispatch(getReviews(item.best_book.id))
     }, 
+
+    getReviews: () => {
+      console.log(this.state.modalShow)
+      
+    },
 
     hideModal: () => {
       dispatch(hideModal());

@@ -6,7 +6,7 @@ const DetailsModal = ({book, id, reviews, onClick, show}) => {
     <div className={showHideClassName} id={id}>
       <div className='book-reviews modal-main'>
       <img src={book.image_url} />
-        {reviews}
+        <div>{reviews}</div>
       <button onClick={onClick}>close</button>
       </div>
     </div>
