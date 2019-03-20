@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux';
 import DetailsModal from '../components/DetailsModal';
-import {getReviews} from '../actions';
 import {hideModal} from '../actions';
 
 class DetailsModalContainer extends Component {

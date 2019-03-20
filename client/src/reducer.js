@@ -20,7 +20,7 @@ export function goodReads(state=initialState, action) {
     case Actions.GET_REVIEWS_SUCCESS:
       return {
         ...state,
-        currentReviews: action.data.reviews_widget
+        currentReviews: action.data.GoodreadsResponse.book.reviews_widget
       }
     case Actions.GET_RESULTS_REQUEST:
       return {
