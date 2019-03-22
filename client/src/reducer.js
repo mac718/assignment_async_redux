@@ -3,6 +3,7 @@ import * as Actions from './actions';
 const initialState = {
   results: [],
   isFetching: false,
+  isFetchingReviews: false,
   modalShow: false,
   currentItem: {},
   currentReviews: '',
@@ -20,7 +21,8 @@ export function goodReads(state=initialState, action) {
     case Actions.GET_REVIEWS_SUCCESS:
       return {
         ...state,
-        currentReviews: action.data.GoodreadsResponse.book.reviews_widget
+        currentReviews: action.data.GoodreadsResponse.book.reviews_widget,
+        isFetchingReviews: false
       }
     case Actions.GET_RESULTS_REQUEST:
       return {
@@ -30,7 +32,9 @@ export function goodReads(state=initialState, action) {
       }
     case Actions.GET_REVIEWS_REQUEST:
     return {
-      ...state
+      ...state,
+      isFetchingReviews: true,
+      error: null
     }
     case Actions.GET_RESULTS_FAILURE:
     case Actions.GET_REVIEWS_FAILURE:

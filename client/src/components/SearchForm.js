@@ -6,7 +6,7 @@ import InputGroup from '../elements/InputGroup';
 const SearchForm = ({onSubmit}) => {
   return (
     <form id="SearchForm" onSubmit={onSubmit}>
-      <h1>Search for Boooks</h1>
+      <h1>Search for Books</h1>
       <InputGroup name="search">
         <Input className="search" name="search" />
       </InputGroup>

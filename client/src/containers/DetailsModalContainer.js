@@ -5,10 +5,15 @@ import {hideModal} from '../actions';
 
 class DetailsModalContainer extends Component {
   render() {
-    const {book, id, reviews, show, onClick} = this.props;
+    const {book, id, reviews, show, onClick, isFetchingReviews} = this.props;
     console.log(reviews)
     return (
-      <DetailsModal book={book} id={id} reviews={reviews} show={show} onClick={onClick}  />
+      <DetailsModal 
+        book={book} id={id}  
+        reviews={reviews} 
+        show={show} 
+        onClick={onClick}  
+        isFetchingReviews={isFetchingReviews} />
     )
   }
 }
@@ -18,7 +23,8 @@ const mapStateToProps = (state, ownProps) => {
     book: state.currentItem,
     id: ownProps.id,
     show: state.modalShow,
-    reviews: state.currentReviews
+    reviews: state.currentReviews,
+    isFetchingReviews: state.isFetchingReviews
   }
 }
 
